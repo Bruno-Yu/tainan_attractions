@@ -58,6 +58,7 @@
     "ohmyfetch": "^0.4.21",
     "pinia": "^2.0.28",
     "tw-elements": "^1.0.0-alpha13",
+    "vee-validate": "^4.7.4",
     "vue-loading-overlay": "^6.0.3",
     "vue-star-rating": "^1.7.0"
   }

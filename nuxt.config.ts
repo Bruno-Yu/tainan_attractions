@@ -43,6 +43,9 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/tailwindcss'],
+  plugins: [
+    '@/plugins/vee-validate.js', '@/plugins/font-awesome-icon.js', '@/plugins/star-rating.js'
+  ],
   // vite: {
   //   plugins: [
   //     VueI18nVitePlugin({

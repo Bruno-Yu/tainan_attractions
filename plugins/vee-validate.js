@@ -1,4 +1,4 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 import {
   Field, Form, ErrorMessage, defineRule, configure,
 } from 'vee-validate';
@@ -17,6 +17,10 @@ configure({
 
 setLocale('zh_TW');
 
-Vue.component('v-form', Form);
-Vue.component('error-message', ErrorMessage);
-Vue.component('v-field', Field);
+
+export default   defineNuxtPlugin(({ vueApp }) =>{
+  // console.log('app', app);
+  vueApp.component('v-form', Form);
+  vueApp.component('error-message', ErrorMessage);
+  vueApp.component('v-field', Field);
+})
