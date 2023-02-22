@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import 'tw-elements';
 import { onMounted } from 'vue'
-import useStore from '@/store'
+import store from '@/store'
 
-const { app } = useStore()
+const { app } = store()
 const initApp = () => {
   app.getLanguageBasedOnBrowser()
 }

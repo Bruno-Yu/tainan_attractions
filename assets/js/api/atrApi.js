@@ -1,14 +1,21 @@
-import Api from '@/assets/js/api';
+import Api from '@/assets/js/api/api';
 // import qs from 'qs';
 
 // const apiPrefix = import.meta.env.VITE_APP_API;
-const apiPrefix = process.env.VITE_APP_API
+// const apiPrefix = process.env.API_BASE_URL;
 // const apiPath = import.meta.env.VITE_APP_PATH;
-const apiPath = process.env.VITE_APP_PATH;
+// const apiPath = process.env.API_BASE_URL_PATH;
 // const apiPrefix = import.meta.env.VITE_LOCAL_API;
+const apiPrefix = 'https://vue3-course-api.hexschool.io/v2/';
+const apiPath = 'brunoyu2023';
 
 // Api 自 Api 繼承所有屬性與方法
 class atrApi extends Api {
+  // static apiPrefix = process.env.API_BASE_URL;
+  // static apiPath = process.env.API_BASE_URL_PATH;
+  // http://localhost:3000/;
+  // https://vue3-course-api.hexschool.io/v2/;
+  // brunoyu2023
 
   // 登入
   static async login({ username, password }) {

@@ -1,9 +1,9 @@
 import useAppStore from './modules/app';
 import {userStore} from './modules/user';
 
-const store = () => ({
+const useStore = () => ({
   app: useAppStore(),
   userStore: userStore()
 })
 
-export default store
+export default useStore

@@ -1,6 +1,10 @@
 import axios from 'axios';
-import { userStore } from '@/stores';
+// import { userStore } from '@/stores';
+import useStore from '@/store';
 
+
+  // api 對應的訊息視窗
+  // const store = userStore();
 class Api {
   // static SERVER = import.meta.env.VITE_LOCAL_API;
 
@@ -15,10 +19,11 @@ class Api {
 
     const responseTypeText = responseType || 'json';
     if (auth) {
-      const store = userStore();
+      const { userStore } = useStore()
+      // const store = userStore();
       // 若有 權杖則先存取在 state.user 中
       // const { token } = this.$store.state.user.token;
-      const { token } = store.$state;
+      const { token } = userStore.$state;
       // 並存取在 reqHeader 裡
       // reqHeaders['Auth-token'] = `${token}`;
       reqHeaders.Authorization = `${token}`;
