@@ -5,9 +5,12 @@ import { fileURLToPath } from 'url'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+    nitro: {
+    serveStatic: true,
+  },
   app: {
     head: {
-      title: 'Demo Site',
+      title: 'tainan attractions',
       htmlAttrs: {
         lang: 'zh-Hant'
       },
@@ -39,10 +42,16 @@ export default defineNuxtConfig({
     ],
     }
   },
-  typescript: {
-    typeCheck: true
-  },
+    runtimeConfig: {
+    API_BASE_URL: process.env.API_BASE_URL,
+    API_BASE_URL_PATH: process.env.API_BASE_PATH
+},
+  // typescript: {
+  //   typeCheck: true
+  // },
   modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@nuxtjs/tailwindcss'],
+  // buildModules: ['@nuxtjs/dotenv'],
+
   plugins: [
     '@/plugins/vee-validate.js', '@/plugins/font-awesome-icon.js', '@/plugins/star-rating.js'
   ],
