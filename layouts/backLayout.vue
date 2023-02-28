@@ -42,22 +42,23 @@
           mt-2
           lg:mt-0
           mr-auto
-        " href="#" @click.prevent="navigateTo({ path: './' });">
+        " href="#" @click.prevent="navigateTo({ path: '/frontStage' });">
           府城印象
         </a>
         <!-- Left links -->
         <ul class="navbar-nav flex flex-col pl-0 list-style-none ms-auto">
           <li class="nav-item p-2">
             <a class="nav-link  text-white hover:opacity-80 focus:opacity-80 p-0" href="#"
-              @click.prevent="navigateTo({ path: './' })">首頁</a>
+              @click.prevent="navigateTo({ path: '/frontStage' })">首頁</a>
           </li>
           <li class="nav-item p-2">
-            <a class="nav-link text-white hover:opacity-80 focus:opacity-80 p-0" href="#" @click.prevent="logOut">登出
+            <a class="nav-link text-white hover:opacity-80 focus:opacity-80 p-0" href="#"
+              @click.prevent="logOut('frontStage')">登出
             </a>
           </li>
           <li class="nav-item p-2">
             <a class="nav-link text-white hover:opacity-80 focus:opacity-80 p-0" href="#"
-              @click.prevent="navigateTo({ path: './admin' })">景點編輯</a>
+              @click.prevent="navigateTo({ path: './' })">景點編輯</a>
           </li>
         </ul>
         <!-- Left links -->
@@ -78,11 +79,10 @@
 </template>
 
 <script>
-// import infoModal from '@/components/infoModal.vue';
-// import { watchEffect } from 'vue';
-// import { userStore } from '@/stores';
+
 import { useApiModal } from '~~/composables/useApiModal';
 import useStore from '@/store';
+import { storeToRefs } from 'pinia';
 
 export default {
   setup() {

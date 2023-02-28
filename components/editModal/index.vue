@@ -94,8 +94,8 @@
                     <div class="mb-3 xl:w-96">
                       <label for="title" class="form-label inline-block mb-2 text-gray-700">評分</label>
 
-                      <star-rating :star-size="20" :animate="true" :increment="0.5"
-                        v-model:rating="tempProduct.rating"></star-rating>
+                      <!-- <star-rating :star-size="20" :animate="true" :increment="0.5"
+                        v-model:rating="tempProduct.rating"></star-rating> -->
 
                     </div>
                   </div>
@@ -292,12 +292,9 @@
 </template>
 
 <script>
-import { ref, toRefs, onMounted, watchEffect } from 'vue';
 import Modal from 'tw-elements/dist/src/js/bs/src/modal';
-// import starRating from '@/components/starRating.vue';
 
 export default {
-  // components: { starRating },
   props: {
     currentItem: {
       type: Object,
@@ -326,16 +323,6 @@ export default {
     const rating = ref(0);
     const tempProduct = ref({});
     const imgUploadLoading = ref(false);
-    // const iconStyle = ref(['far', 'star']);
-
-    // function changeColor() {
-    //   // icon.value = ['fa', 'star']
-    //   iconStyle.value = ['fa', 'star']
-    // }
-    // function resetColor() {
-    //   // icon.value = ['fa', 'star']
-    //   iconStyle.value = ['far', 'star']
-    // }
 
     function uploadImg() { }
     // modal
