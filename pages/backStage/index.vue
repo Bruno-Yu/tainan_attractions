@@ -85,7 +85,7 @@
               <h5 class="text-gray-900 text-xl font-medium mb-2">{{ currentItem.title }}</h5>
               <div class="text-gray-700 text-base mb-2">
                 <!-- <star-rating :star-size="20" :animate="true" :increment="0.5" :read-only="true"
-                  :rating="currentItem.rating ? currentItem.rating : 0" /> -->
+                  :rating="currentItem.rating ? currentItem.rating : 0"></star-rating> -->
               </div>
               <p class="text-gray-700 text-base mb-2">
                 {{ currentItem.category }}

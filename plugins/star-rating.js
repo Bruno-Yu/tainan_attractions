@@ -1,6 +1,7 @@
-import StarRating from 'vue-star-rating';
+import StarRating from 'vue-star-rating'
+// VueStarRating.default
 
-export default   defineNuxtPlugin(({ vueApp }) =>{
+export default defineNuxtPlugin(({ vueApp }) => {
   // console.log('app', app);
-  vueApp.component('star-rating', StarRating);
+  vueApp.component('star-rating', StarRating)
 })
